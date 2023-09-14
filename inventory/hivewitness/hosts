@@ -1,5 +1,5 @@
 # file: hivewitness/hosts
 
 [hivewitness]
-hivewitness ansible_host=18.118.134.50 ansible_ssh_user=ubuntu role=hivewitness
+hivewitness ansible_host=<INSERT_HERE_YOUR_HOST> ansible_ssh_user=<INSERT_HERE_USERNAME> role=hivewitness
 
