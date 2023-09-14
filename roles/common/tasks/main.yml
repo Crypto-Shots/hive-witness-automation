@@ -1,0 +1,14 @@
+---
+# file: roles/common/tasks/main.yml
+
+- name: install common packages
+  ansible.builtin.apt:
+    name: "{{item}}"
+    state: present
+  become: yes
+  with_items:
+    - unzip
+    - git
+    - curl
+    - wget
+    - screen

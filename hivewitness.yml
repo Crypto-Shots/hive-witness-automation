@@ -1,0 +1,7 @@
+---
+# file hivewitness.yml
+
+- hosts: hivewitness
+  roles:
+    - common
+    - hive-witness

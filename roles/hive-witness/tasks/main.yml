@@ -1,0 +1,46 @@
+- ansible.posix.sysctl:
+    name: vm.swappiness
+    value: '1'
+    sysctl_set: true
+    state: present
+    reload: true
+  become: true
+
+- name: create hive_witness folder
+  file:
+    path: '{{ hive_witness.folder }}'
+    state: directory
+  become: true
+
+- name: Clone someguy123 repo
+  ansible.builtin.git:
+    repo: https://github.com/someguy123/hive-docker.git
+    dest: '{{ hive_witness.folder }}'
+    single_branch: yes
+    version: master
+  become: true
+
+- name: check docker
+  shell: "apt list --installed | grep -q {{ item }} && echo 'ok' || echo 'install_docker'" 
+  register: docker_installed
+  changed_when: false
+  become: true
+  with_items:
+    - "{{ docker_package }}"
+
+- name: install docker
+  command: "{{ hive_witness.folder }}/run.sh {{ item.stdout_lines | join('\n') }}"
+  become: true
+  when:
+    - item != 'ok'
+  with_items:
+    - "{{ docker_installed.results }}"
+
+- name: install hive witness image
+  shell: "{{ hive_witness.folder }}/run.sh install"
+  changed_when: false
+  become: true
+
+- name: setup shm_size
+  shell: "{{ hive_witness.folder }}/run.sh shm_size 64G"
+  become: true
