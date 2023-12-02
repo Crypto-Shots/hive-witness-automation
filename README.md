@@ -70,3 +70,14 @@ https://peakd.com/me/witnesses
 
 You can refer to the someguy123 guide for the configuration details:
 https://peakd.com/hive-139531/@someguy123/how-to-set-up-a-hive-witness-or-seed-node-non-mira-upgrade-from-steem-docker-to-hive-docker
+
+-----
+
+### VOTES ON OUR WITNESSES ARE HIGHLY APPRECIATED
+
+- Hive
+https://vote.hive.uno/@crypto-shots
+https://vote.hive.uno/@keys-defender
+
+- Hive-Engine
+https://primersion.com/he-witnesses > @crypto-shots or @keys-defender
