@@ -73,11 +73,13 @@ https://peakd.com/hive-139531/@someguy123/how-to-set-up-a-hive-witness-or-seed-n
 
 -----
 
-### VOTES ON OUR WITNESSES ARE HIGHLY APPRECIATED
+<br>
 
-- Hive
-https://vote.hive.uno/@crypto-shots
+#### VOTES ON OUR WITNESSES ARE HIGHLY APPRECIATED
+
+- Hive <br>
+https://vote.hive.uno/@crypto-shots <br>
 https://vote.hive.uno/@keys-defender
 
-- Hive-Engine
+- Hive-Engine <br>
 https://primersion.com/he-witnesses > @crypto-shots or @keys-defender
